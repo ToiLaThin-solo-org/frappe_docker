@@ -42,6 +42,9 @@ jobs:
     needs: build-and-push
     runs-on: self-hosted
     steps:
+      - name: Checkout frappe_docker
+        uses: actions/checkout@v4
+        
       - name: Create environment file
         shell: powershell
         run: |
